@@ -18,7 +18,7 @@ const products = [
   {
     name: "Book a Stay",
     description: "Get a better understanding of your traffic",
-    href: "#",
+    href: "/",
     icon: HomeIcon,
   },
   {

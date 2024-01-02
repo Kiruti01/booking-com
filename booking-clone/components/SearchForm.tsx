@@ -16,8 +16,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { Calendar } from "./ui/calendar";
 
@@ -40,7 +40,6 @@ export const formSchema = z.object({
     message: "Please select at least 1 room",
   }),
 });
-
 
 function SearchForm() {
   const router = useRouter();
@@ -82,6 +81,7 @@ function SearchForm() {
 
     router.push(`/search?url=${url.href}`);
   }
+
   return (
     <Form {...form}>
       <form
@@ -89,7 +89,7 @@ function SearchForm() {
         className="flex flex-col lg:flex-row lg:max-w-6xl lg:mx-auto items-center justify-center space-x-0 lg:space-x-2 space-y-4 lg:space-y-0 rounded-lg"
       >
         <div className="grid w-full lg:max-w-sm items-center gap-1.5">
-          <FormField 
+          <FormField
             control={form.control}
             name="location"
             render={({ field }) => (
@@ -104,7 +104,6 @@ function SearchForm() {
                 <FormControl>
                   <Input placeholder="Nairobi, KE" {...field} />
                 </FormControl>
-                
               </FormItem>
             )}
           />
@@ -223,7 +222,7 @@ function SearchForm() {
         </div>
       </form>
     </Form>
-  )
+  );
 }
 
-export default SearchForm
+export default SearchForm;
